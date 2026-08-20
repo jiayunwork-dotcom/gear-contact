@@ -53,7 +53,7 @@ func (s *Spec) Validate() error {
 // validateTeeth enforces the positive integer tooth count on one gear entry.
 func validateTeeth(gs GearSpec, which string) error {
 	if gs.Teeth <= 0 {
-		return fmt.Errorf("%s: %w (got %d)", which, ErrTeethNonPositive, gs.Teeth)
+		return commitTeeth(fmt.Errorf("%s: %w (got %d)", which, ErrTeethNonPositive, gs.Teeth))
 	}
 	return nil
 }
