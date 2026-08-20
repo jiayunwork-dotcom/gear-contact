@@ -92,8 +92,8 @@ func ValidateGear(g Gear, which string) error {
 			which, ErrTipInsideBase, g.AddendumRadius(), g.BaseRadius())
 	}
 	if IsUndercut(g) {
-		return fmt.Errorf("%s: %w (z=%d, x=%v, xmin=%v)",
-			which, ErrUndercut, g.Teeth, g.Shift, g.UndercutLimit())
+		return commitUndercut(fmt.Errorf("%s: %w (z=%d, x=%v, xmin=%v)",
+			which, ErrUndercut, g.Teeth, g.Shift, g.UndercutLimit()))
 	}
 	return nil
 }
