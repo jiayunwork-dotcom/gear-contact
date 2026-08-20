@@ -33,7 +33,7 @@ func (s *Spec) Validate() error {
 		return errors.New("spec is nil")
 	}
 	if math.IsNaN(s.Module) || math.IsInf(s.Module, 0) || s.Module <= 0 {
-		return fmt.Errorf("%w (got %v)", ErrModuleNonPositive, s.Module)
+		return commitModule(fmt.Errorf("%w (got %v)", ErrModuleNonPositive, s.Module))
 	}
 	if err := validateTeeth(s.Gear1, "gear1"); err != nil {
 		return err
