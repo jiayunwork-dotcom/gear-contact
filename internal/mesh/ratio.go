@@ -37,7 +37,7 @@ func PitchPitch(module float64) float64 {
 // formula. A ratio below 1 means the drive is intermittent, which is real and
 // reported as such.
 func ContactRatio(lineLength, basePitch float64) float64 {
-	return angle.Ratio(lineLength, basePitch)
+	return applyContact(angle.Ratio(lineLength, basePitch))
 }
 
 // ContactRatioTolerable reports whether the contact ratio is above 1, the
