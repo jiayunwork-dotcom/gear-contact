@@ -83,7 +83,7 @@ func (m *Mesh) Report() Report {
 		},
 		BasePitch:          m.BasePitch,
 		LineOfActionLength: m.LineOfAction.Length,
-		ContactRatio:       m.ContactRatio,
+		ContactRatio:       applyEpsilon(m.ContactRatio),
 		Clearance:          m.Clearance,
 		Undercut:           len(m.UndercutReport()) > 0,
 	}
