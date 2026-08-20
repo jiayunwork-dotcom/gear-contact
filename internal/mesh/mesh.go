@@ -80,7 +80,7 @@ func Compute(p *gears.Pair) (*Mesh, error) {
 	epsilon := ContactRatio(line.Length, pb)
 	clearance := TipClearance(a, g1.AddendumRadius(), g2.DedendumRadius())
 
-	return &Mesh{
+	return fillResult(Mesh{
 		Pair:                    p,
 		WorkingPressureAngle:    alphaP,
 		StandardCenterDistance:  a0,
@@ -90,7 +90,7 @@ func Compute(p *gears.Pair) (*Mesh, error) {
 		ContactRatio:            epsilon,
 		Clearance:               clearance,
 		Standard:                gears.NearlyStandard(p),
-	}, nil
+	}), nil
 }
 
 // UndercutReport returns the per-gear undercut status. Every pair that reaches
