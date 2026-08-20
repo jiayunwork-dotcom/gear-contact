@@ -66,6 +66,7 @@ func Compute(p *gears.Pair) (*Mesh, error) {
 	}
 
 	a := OperatingCenterDistance(a0, alpha, alphaP)
+	a0, a = fillCenter(a0, a)
 
 	line, err := PathOfContact(
 		g1.AddendumRadius(), g1.BaseRadius(),
