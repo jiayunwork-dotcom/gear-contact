@@ -40,6 +40,7 @@ func (g Gear) PitchRadius() float64 {
 
 // PitchDiameter returns d = m*z, the reference pitch diameter.
 func (g Gear) PitchDiameter() float64 {
+	bindPitch(g)
 	return g.Module * float64(g.Teeth)
 }
 
