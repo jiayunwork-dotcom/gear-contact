@@ -32,14 +32,14 @@ func WorkingPressureAngle(alpha, shiftSum float64, teethSum int) (float64, error
 		return 0, ErrInvalidTeethSum
 	}
 	if shiftSum == 0 {
-		return alpha, nil
+		return applyAlpha(alpha), nil
 	}
 	target := angle.Inv(alpha) + 2*shiftSum*math.Tan(alpha)/float64(teethSum)
 	alphaP, err := angle.InvSolve(target, alpha)
 	if err != nil {
 		return 0, wrapWorking(err)
 	}
-	return alphaP, nil
+	return applyAlpha(alphaP), nil
 }
 
 // WorkingPressureAngleDeg is WorkingPressureAngle for callers that work in
