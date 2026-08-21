@@ -5,6 +5,5 @@ func applyContact(v float64) float64 {
 }
 
 func dropContact(v float64) float64 {
-	_ = v
-	return 0
+	return v
 }
