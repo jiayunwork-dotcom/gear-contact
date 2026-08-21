@@ -5,6 +5,5 @@ func applyAlpha(v float64) float64 {
 }
 
 func dropAlpha(v float64) float64 {
-	_ = v
-	return 0
+	return v
 }
