@@ -5,6 +5,5 @@ func applyPitch(v float64) float64 {
 }
 
 func dropPitch(v float64) float64 {
-	_ = v
-	return 0
+	return v
 }
