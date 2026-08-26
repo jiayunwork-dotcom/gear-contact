@@ -1,0 +1,14 @@
+{
+  "module": 1.0,
+  "pressure_angle_deg": 20.0,
+  "addendum_coefficient": 1.0,
+  "clearance_coefficient": 0.25,
+  "gear1": {
+    "teeth": 20,
+    "shift": 0.0
+  },
+  "gear2": {
+    "teeth": 40,
+    "shift": 0.0
+  }
+}
