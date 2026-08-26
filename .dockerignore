@@ -1,0 +1,14 @@
+.git
+.gitignore
+.DS_Store
+.vscode
+.idea
+debug.log
+error.log
+trace.log
+stderr.log
+stdout.log
+out
+dist
+tmp
+vendor

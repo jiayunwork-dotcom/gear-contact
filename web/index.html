@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>渐开线直齿啮合核算</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>渐开线直齿圆柱齿轮啮合</h1>
+  <p>提交模数、齿数与压力角 JSON，由后端给出中心距、重合度与 Hertz 接触应力。</p>
+</header>
+<main>
+  <section class="panel">
+    <h2>规格 JSON</h2>
+    <textarea id="body" rows="16"></textarea>
+    <div class="actions">
+      <button id="btn-example" type="button">加载示例</button>
+      <button id="btn-run" type="button">核算 /api/mesh</button>
+    </div>
+    <p id="hint" class="hint"></p>
+  </section>
+  <section class="panel" id="err-panel" hidden><h2>后端错误</h2><pre id="err-text"></pre></section>
+  <section class="panel" id="out-panel" hidden><h2>结果</h2><table id="out-table"></table></section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
